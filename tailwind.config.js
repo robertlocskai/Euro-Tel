@@ -17,7 +17,8 @@ export default {
         transparent: 'transparent',
         current: 'currentColor',
         'secondary': '#023F98',
-        'secondaryDarker': '#002b69'
+        'secondaryDarker': '#002b69',
+        'secondaryLighter': '#2864BC'
       },
       backgroundImage: {
         'headerImg': "url('/public/images/headerImg1.jpg')",
