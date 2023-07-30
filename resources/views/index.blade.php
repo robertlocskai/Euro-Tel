@@ -34,8 +34,13 @@
             Találd meg a neked megfelelőt!<br>
             <a href="/products?type=phone" class="text-lg font-normal pl-5 pr-5 pt-4 pb-4 hover:bg-secondaryDarker bg-secondary transition rounded">Telefonjaink</a>
         </div>
-        <img class="absolute end-full ml-14" src="{{ asset('images/icons/left.svg') }}" alt="Left button">
-        <img class="absolute mr-3" src="{{ asset('images/icons/right.svg') }}" alt="Right button">
+        <div class="absolute text-white drop-shadow-2xl w-2/4 h-5 text-lg font-black text-center inline-block w-full mb-3 self-end align-middle leading-tight">
+            <a href="#">•</a>
+            <a href="#">•</a>
+            <a href="#">•</a>
+            <a href="#">•</a>
+            <a href="#">•</a>
+        </div>
     </div>
     <!--UNDER HEADER INFO-->
     <div class="flex h-12 w-full items-center justify-center bg-secondary text-sm text-white">
@@ -128,10 +133,19 @@
     </section>
 
 
-    <footer class="bg-secondary h-80 w-full">
+    <footer id="footer" class="relative bg-secondary h-80 w-full">
 
-        <div class="inline-block w-3/12 h-80 m-0"><div class="m-10"><span class="font-bold text-2xl text-white">Euro-Tel</span><br /><span class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo, velit ut interdum venenatis, urna nunc lacinia arcu, ac interdum mi ex non tellus.</span></div></div>
-        <div class="inline-block w-2/12 h-80 bg-gray-400 m-0"><div class="m-10"><span class="font-normal text-xl text-white">Nyitvatartás</span><br /><br />
+        <div class="inline-block float-left w-3/12 h-80">
+            <div class="m-10">
+                <span class="font-bold text-2xl text-white">Euro-Tel</span>
+                <br />
+                <span class="text-white">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    In commodo, velit ut interdum venenatis, urna nunc lacinia arcu, ac interdum mi ex non tellus.
+                </span>
+            </div>
+        </div>
+        <div class="inline-block float-left h-80 m-0"><div class="m-10"><span class="font-normal text-xl text-white">Nyitvatartás</span><br /><br />
             <span class="text-white">
                 hétfő: 9:30 - 17:00<br />
                 kedd: 9:30 - 17:00<br />
@@ -141,7 +155,7 @@
                 szombat: 9:30 - 12:00<br />
                 vasárnap: ZÁRVA
             </span></div></div>
-        <div class="inline-block w-2/12 h-80 bg-gray-400 m-0"><div class="m-10"><span class="font-normal text-xl text-white">Kapcsolat</span><br /><br />
+        <div class="inline-block float-left h-80 m-0"><div class="m-10"><span class="font-normal text-xl text-white">Kapcsolat</span><br /><br />
             <span class="text-white">
                 Esztergom, Kossuth Lajos utca 6<br />
                 +36(20)310 0355<br />
@@ -150,7 +164,9 @@
                 +36(30)872 4464<br />
                 eurotel.nyergesujfalu@gmail.com
             </span></div></div>
-        <div class="inline-block w-2/12 h-80 bg-gray-200 m-0"><div class="m-10"><span class="font-bold text-white">Euro-Tel</span></div></div>
+        <div class="inline-block float-left h-80 m-0"><div class="m-10"><span class="font-bold text-white">Euro-Tel</span></div></div>
+
+        <div class="absolute w-full top-full -translate-y-full text-center text-secondaryLighter">©2023 Euro-Tel</div>
 
     </footer>
 
