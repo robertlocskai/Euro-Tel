@@ -15,7 +15,7 @@
     <title>Euro-Tel | Kezdőlap</title>
 </head>
 <body>
-    <!--MENU-->
+    <!--MENU--> 
     <div id="menu" class="fixed end-0 h-full w-96 bg-white z-10 origin-right hidden">
     
         <div class="flex h-28 items-center justify-end">

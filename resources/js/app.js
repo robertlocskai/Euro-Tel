@@ -1,5 +1,5 @@
 import './bootstrap';
-
+ 
 const initApp = () => {
     const hBtn = document.getElementById('menuBtn')
     const menu = document.getElementById('menu')

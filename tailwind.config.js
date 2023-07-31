@@ -28,7 +28,7 @@ export default {
         '7nhalf': '5.1rem'
       },
       keyframes: {
-        'open-menu': {
+        'open-menu': { 
           '0%': { transform: 'translateX(100%)' },
           '100%': { transform: 'translateX(0)' },
         }

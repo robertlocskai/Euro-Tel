@@ -11,7 +11,7 @@ body {
     /*animation: translate .4s ease-in-out;*/
 }
 
-@keyframes translate {
+@keyframes translate { 
     0% {
         transform: translateX(100%);
     }
