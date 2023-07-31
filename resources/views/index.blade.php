@@ -11,9 +11,54 @@
 
     
     @vite('resources/css/app.css')
+    @vite('resources/js/app.js')
     <title>Euro-Tel | Kezdőlap</title>
 </head>
 <body>
+    <!--MENU--> 
+    <div id="menu" class="fixed end-0 h-full w-96 bg-white z-10 origin-right hidden">
+    
+        <div class="flex h-28 items-center justify-end">
+            <img id="menuClose" src="{{ asset('images/icons/close.svg') }}" class="mr-5 cursor-pointer"/>
+        </div>
+        <!--HASZNALT IPHONEOK-->
+        <a href="/products?type=phone&brand=apple">
+            <div class="flex items-center justify-center h-20 font-md hover:bg-secondary hover:text-white transition duration-100">
+                HASZNÁLT IPHONEOK
+            </div>
+        </a>
+        <!--HASZNALT SAMSUNG-->
+        <a href="/products?type=phone&brand=samsung">
+            <div class="flex items-center justify-center h-20 font-md hover:bg-secondary hover:text-white transition duration-100">
+                HASZNÁLT SAMSUNGOK
+            </div>
+        </a>
+        <!--OSSZES HASZNALT-->
+        <a href="/products?type=phone">
+            <div class="flex items-center justify-center h-20 font-md hover:bg-secondary hover:text-white transition duration-100">
+                EGYÉB HASZNÁLT TELEFONOK
+            </div>
+        </a>
+        <!--KIEGESZITOK-->
+        <a href="/products?type=accessories">
+            <div class="flex items-center justify-center h-20 font-md hover:bg-secondary hover:text-white transition duration-100">
+                KIEGÉSZÍTŐK
+            </div>
+        </a>
+        <!--TOKOK-->
+        <a href="/products?type=cases">
+            <div class="flex items-center justify-center h-20 font-md hover:bg-secondary hover:text-white transition duration-100">
+                TELEFONTOKOK
+            </div>
+        </a>
+        <!--SZERVIZ-->
+        <a href="/repair">
+            <div class="flex items-center justify-center h-20 font-md hover:bg-secondary hover:text-white transition duration-100">
+                SZERVIZ
+            </div>
+        </a>
+
+    </div>
     <!--NAVBAR-->
     <div class="flex h-28 w-full items-center">
         <img src="{{ asset('images/logo.png') }}" class="absolute ml-24 h-27" />
@@ -21,8 +66,9 @@
         <button type="submit" value="" class="-ml-12 h-10 w-10 rounded-full hover:bg-secondaryDarker bg-secondary text-white cursor-pointer" >
             <img src="{{ asset('images/icons/search.svg') }}" class="-ml-2 translate-x-2/4" />
         </button>
-        <span class="ml-10 mr-5 cursor-pointer"><img src="{{ asset('images/icons/menu.svg') }}"></span>
+        <span id="menuBtn" class="ml-10 mr-5 cursor-pointer"><img src="{{ asset('images/icons/menu.svg') }}"></span>
     </div>
+
     <!--NAV INFO-->
     <div class="flex h-12 w-full items-center justify-center bg-gray-200 text-sm">
         <div class="inline-block align-middle"><img class="inline-block h-4 mr-2" src="{{ asset('images/icons/phone.svg') }}"/>+36(20) 310 0355</div>
@@ -34,8 +80,13 @@
             Találd meg a neked megfelelőt!<br>
             <a href="/products?type=phone" class="text-lg font-normal pl-5 pr-5 pt-4 pb-4 hover:bg-secondaryDarker bg-secondary transition rounded">Telefonjaink</a>
         </div>
-        <img class="absolute end-full ml-14" src="{{ asset('images/icons/left.svg') }}" alt="Left button">
-        <img class="absolute mr-3" src="{{ asset('images/icons/right.svg') }}" alt="Right button">
+        <div class="absolute text-white drop-shadow-2xl w-2/4 h-5 text-lg font-black text-center inline-block w-full mb-3 self-end align-middle leading-tight">
+            <a href="#">•</a>
+            <a href="#">•</a>
+            <a href="#">•</a>
+            <a href="#">•</a>
+            <a href="#">•</a>
+        </div>
     </div>
     <!--UNDER HEADER INFO-->
     <div class="flex h-12 w-full items-center justify-center bg-secondary text-sm text-white">
@@ -121,17 +172,27 @@
 
     </section>
 
+    <!--CONTACT INFOS-->
     <section id="contact">
 
         <div class="mapouter mt-20 mb-32"><div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Esztergom Kossuth Lajos utca 6. &amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://connectionsgame.org/">Connections Game</a></div><style>.mapouter{position:relative;text-align:right;width:100%;height:400px;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:400px;}.gmap_iframe {height:400px!important;}</style></div>
 
     </section>
 
+    <!--FOOTER-->
+    <footer id="footer" class="relative bg-secondary h-80 w-full">
 
-    <footer class="bg-secondary h-80 w-full">
-
-        <div class="inline-block w-3/12 h-80 m-0"><div class="m-10"><span class="font-bold text-2xl text-white">Euro-Tel</span><br /><span class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo, velit ut interdum venenatis, urna nunc lacinia arcu, ac interdum mi ex non tellus.</span></div></div>
-        <div class="inline-block w-2/12 h-80 bg-gray-400 m-0"><div class="m-10"><span class="font-normal text-xl text-white">Nyitvatartás</span><br /><br />
+        <div class="inline-block float-left w-3/12 h-80">
+            <div class="m-10">
+                <span class="font-bold text-2xl text-white">Euro-Tel</span>
+                <br />
+                <span class="text-white">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    In commodo, velit ut interdum venenatis, urna nunc lacinia arcu, ac interdum mi ex non tellus.
+                </span>
+            </div>
+        </div>
+        <div class="inline-block float-left h-80 m-0"><div class="m-10"><span class="font-normal text-xl text-white">Nyitvatartás</span><br /><br />
             <span class="text-white">
                 hétfő: 9:30 - 17:00<br />
                 kedd: 9:30 - 17:00<br />
@@ -141,7 +202,7 @@
                 szombat: 9:30 - 12:00<br />
                 vasárnap: ZÁRVA
             </span></div></div>
-        <div class="inline-block w-2/12 h-80 bg-gray-400 m-0"><div class="m-10"><span class="font-normal text-xl text-white">Kapcsolat</span><br /><br />
+        <div class="inline-block float-left h-80 m-0"><div class="m-10"><span class="font-normal text-xl text-white">Kapcsolat</span><br /><br />
             <span class="text-white">
                 Esztergom, Kossuth Lajos utca 6<br />
                 +36(20)310 0355<br />
@@ -150,7 +211,9 @@
                 +36(30)872 4464<br />
                 eurotel.nyergesujfalu@gmail.com
             </span></div></div>
-        <div class="inline-block w-2/12 h-80 bg-gray-200 m-0"><div class="m-10"><span class="font-bold text-white">Euro-Tel</span></div></div>
+        <div class="inline-block float-left h-80 m-0"><div class="m-10"><span class="font-bold text-white">Euro-Tel</span></div></div>
+
+        <div class="absolute w-full top-full -translate-y-full text-center text-secondaryLighter">©2023 Euro-Tel</div>
 
     </footer>
 
